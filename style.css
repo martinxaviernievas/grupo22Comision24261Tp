@@ -185,7 +185,6 @@ th {
     }
     nav {
         position: static;
-        column-gap: normal;
     }
     @media screen and (max-width: 768px) {
         .nav-list {
