@@ -1,57 +1,63 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Contacto</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    </head>
-    <body class="contacto">
-        <header>
-                <h1>
-                    <img src="/WhatsApp Image 2024-04-22 at 09.42.27 (2).jpg" alt="logo">
-                    <img src="/72494424-sport-banner-portada-de-facebook-conjunto-de-bolas-de-deporte-y-artículos-de-juego-en-un-fondo-azul.jpg" alt="logo">
-                </h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-        </header>
-        <main>
-            <h1 class="contacto1">Contacto</h1>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | SportShop</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body class="contacto">
+    <header>
+        <div class="header-container">
+            <img src="/WhatsApp Image 2024-04-22 at 09.42.27 (2).jpg" alt="Logo de SportShop" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/CaC TP 24261 Final/Pages/sobre-nosotros.html">About Us</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="contacto1">Contacto</h1>
+        <div class="form-container">
             <form id="miFormulario" action="https://formsubmit.co/nievasmartinxavier@gmail.com" method="POST" novalidate>
-                <label for="name">Nombre y Apellido</label>
-                <input type="text" name = "name" id="nombreapellido" class="input-padron" required>
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" name="name" id="nombreapellido" class="input-padron" required minlength="5" maxlength="20" pattern="[A-Za-z\s]+">
 
-                <label for="email">Correo Electrónico</label>
+                <label for="correoelectronico">Correo Electrónico</label>
                 <input type="email" name="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
 
                 <label for="telefono">Teléfono</label>
-                <input type="tel"  name = "telefono" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                <input type="tel" name="telefono" id="telefono" class="input-padron" required pattern="\d{10,}" placeholder="(XX) XXXX XXXX">
+
+                <label for="genero">Seleccione su Género</label>
+                <select name="genero" id="genero" class="input-padron" required>
+                    <option value="">Seleccione</option>
+                    <option value="Mujer">Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Otro">Otro</option>
+                </select>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea name = "mensaje" cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
-                
-                <label class="checkbox"><input type="checkbox"  checked>¿Le gustaría recibir novedades sobre SportShop?</label>                
-                
-                <input type="submit" name = "submit" value="Enviar formulario" class="enviar">
+                <textarea name="mensaje" id="mensaje" cols="70" rows="10" class="input-padron" required maxlength="1500"></textarea>
 
+                <label class="checkbox">
+                    <input type="checkbox" name="novedades" checked> ¿Le gustaría recibir novedades sobre SportShop?
+                </label>
+
+                <input type="submit" name="submit" value="Enviar formulario" class="enviar">
             </form>
-        </main>
-        <footer>
-            <p style="font-size: 24px; font-weight: bold; color: #000000; text-align: center;"></p>
-            <div class="column is-6 has-text-centered">
-                    
-            </div>
         </div>
-            <img src="/WhatsApp Image 2024-04-22 at 09.42.27 (2).jpg"  alt="Logo">
-            <p class="copyright">&copy  Copyright SportShop  2017-2024</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+    </main>
+    <footer>
+        <img src="/WhatsApp Image 2024-04-22 at 09.42.27 (2).jpg" alt="Logo de SportShop">
+        <p class="copyright">&copy; Copyright SportShop 2017-2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
